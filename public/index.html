@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="delegate-ch"
+      content="sec-ch-ua-platform-version localhost:3001; ua-platform-version localhost:3001;"
+    />
     <title>Document</title>
   </head>
   <body>
-
     <button id="button">send</button>
-    
+
     <script>
       const btn = document.getElementById("button");
       btn.onclick = async () => {
-        await fetch("http://localhost:3000");
+        await fetch("/ping");
       };
     </script>
   </body>
